@@ -7,9 +7,8 @@ footer.addEventListener("click", function() {
   console.log(`Clic numéro ${countClicks}`);
 });
 
-// Fonctionnalité 2 : Dérouler le "hamburger menu"
-// elementDuDOM.classList.toggle("nomDeLaClasse")
-let navbarBtn = document.querySelector(".navbar-toggler-icon");
+// Fonctionnalité 2 : Dérouler le "hamburger menu" lors du clic sur l'icone
+let navbarBtn = document.querySelector(".navbar-toggler");
 let navbarHeader = document.querySelector("#navbarHeader");
 
 navbarBtn.addEventListener('click', function() {
@@ -37,7 +36,13 @@ secondCardEditBtn.addEventListener("click", function() {
 });
 
 // Fonctionnalité 5 : Faire disparaitre le Bootstrap lors du double clic sur la navbar (réversible)
-// Indice : Cherche sur Google comment désactiver le tag <link> avec JavaScript.
+let header = document.querySelector("header");
+
+header.addEventListener("dblclick", function() {
+  for (let i = 0; i < document.styleSheets.length; i++) {
+    void(document.styleSheets.item(i).disabled=true);
+  }
+});
 
 // Fonctionnalité 6
 
