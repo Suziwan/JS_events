@@ -9,13 +9,12 @@ footer.addEventListener("click", function() {
 
 // Fonctionnalité 2 : Dérouler le "hamburger menu"
 // elementDuDOM.classList.toggle("nomDeLaClasse")
-//let navbarBtn = document.querySelector("navbar-toggler");
-//let navbarHeader = document.querySelector("#navbarHeader");
+let navbarBtn = document.querySelector(".navbar-toggler-icon");
+let navbarHeader = document.querySelector("#navbarHeader");
 
-//navbarBtn?.addEventListener('click', function() {
-//  navbarHeader.classList.toggle("collapse");
-//  console.log('You clicked the button');
-//});
+navbarBtn.addEventListener('click', function() {
+  navbarHeader.classList.toggle("collapse");
+});
 
 // Fonctionnalité 3 : Changer la couleur de la première carte en rouge lors du clic sur Edit (irréversible)
 let firstCardEditBtn = document.querySelector("body > main > div > div > div > div:nth-child(1) > div > div > div > div > button.btn.btn-sm.btn-outline-secondary")
